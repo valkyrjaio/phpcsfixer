@@ -29,6 +29,13 @@
       "Valkyrja\\Fixer\\Tests\\" : "tests/Tests"
     }
   },
+  "scripts"           : {
+    "phpcsfixer"                              : "cd .github/ci/phpcsfixer && composer fix",
+    "phpcsfixer-check"                        : "cd .github/ci/phpcsfixer && composer check",
+    "phpcsfixer-outdated-check"               : "cd .github/ci/phpcsfixer && composer install && composer outdated --direct --minor-only",
+    "phpcsfixer-outdated-check-major-release" : "cd .github/ci/phpcsfixer && composer install && composer outdated --direct",
+    "phpcsfixer-composer-update"              : "cd .github/ci/phpcsfixer && composer update"
+  },
   "minimum-stability" : "dev",
   "prefer-stable"     : true
 }

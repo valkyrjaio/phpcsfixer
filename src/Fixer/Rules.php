@@ -1,7 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 /*
- * This file is part of the Valkyrja Framework package.
+ * This file is part of the Valkyrja PHP CS Fixer package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
