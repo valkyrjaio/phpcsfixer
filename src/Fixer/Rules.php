@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of the Valkyrja Framework package.
  *
@@ -49,6 +47,7 @@ class Rules
                     'combine_consecutive_issets'               => true,
                     'combine_consecutive_unsets'               => true,
                     'comment_to_phpdoc'                        => true,
+                    'declare_strict_types'                     => true,
                     'method_chaining_indentation'              => true,
                     'modernize_types_casting'                  => true,
                     'no_unreachable_default_argument_value'    => true,
