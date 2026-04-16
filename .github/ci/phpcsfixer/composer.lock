@@ -4,8 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9d4ff1bb05cc850b05e3f7502cd1dc5",
-    "packages": [
+    "content-hash": "0b3cb87fe7ab7d481e39f89ead3d6506",
+    "packages": [],
+    "packages-dev": [
         {
             "name": "clue/ndjson-react",
             "version": "v1.3.0",
@@ -2745,56 +2746,8 @@
                 }
             ],
             "time": "2026-03-30T15:14:47+00:00"
-        },
-        {
-            "name": "valkyrja/phpcsfixer",
-            "version": "v26.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/valkyrjaio/phpcsfixer.git",
-                "reference": "48041f12bfaabbfe5da8ad9f8bcc80b3055ff62a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/valkyrjaio/phpcsfixer/zipball/48041f12bfaabbfe5da8ad9f8bcc80b3055ff62a",
-                "reference": "48041f12bfaabbfe5da8ad9f8bcc80b3055ff62a",
-                "shasum": ""
-            },
-            "require": {
-                "friendsofphp/php-cs-fixer": "^3.95.1",
-                "php": ">=8.4"
-            },
-            "type": "project",
-            "autoload": {
-                "psr-4": {
-                    "Valkyrja\\Fixer\\": "src/Fixer"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Melech Mizrachi",
-                    "email": "melechmizrachi@gmail.com"
-                }
-            ],
-            "description": "PHP CS Fixer for the Valkyrja Project.",
-            "homepage": "https://www.valkyrja.io/",
-            "keywords": [
-                "PhpCsFixer",
-                "ci",
-                "valkyrja"
-            ],
-            "support": {
-                "issues": "https://github.com/valkyrjaio/phpcsfixer/issues",
-                "source": "https://github.com/valkyrjaio/phpcsfixer/tree/v26.0.1"
-            },
-            "time": "2026-04-15T22:29:34+00:00"
         }
     ],
-    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {},
