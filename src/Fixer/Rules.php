@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja PHP CS Fixer package.
+ * This file is part of the Valkyrja Framework package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -24,9 +24,9 @@ class Rules
         return new Config()
             ->setParallelConfig(
                 new ParallelConfig(
-                    maxProcesses: 5,
-                    filesPerProcess: 10,
-                    processTimeout: 240
+                    5,
+                    10,
+                    240
                 )
             )
             ->setRiskyAllowed(true)
