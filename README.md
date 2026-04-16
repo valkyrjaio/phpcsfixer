@@ -6,11 +6,60 @@
 
 PHP CS Fixer rules for the Valkyrja project.
 
-## Requirements
+<p>
+    <a href="https://packagist.org/packages/valkyrja/phpcsfixer"><img src="https://poser.pugx.org/valkyrja/phpcsfixer/require/php" alt="PHP Version Require"></a>
+    <a href="https://packagist.org/packages/valkyrja/phpcsfixer"><img src="https://poser.pugx.org/valkyrja/phpcsfixer/v" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/valkyrja/phpcsfixer"><img src="https://poser.pugx.org/valkyrja/phpcsfixer/license" alt="License"></a>
+    <!-- <a href="https://packagist.org/packages/valkyrja/phpcsfixer"><img src="https://poser.pugx.org/valkyrja/phpcsfixer/downloads" alt="Total Downloads"></a>-->
+    <a href="https://scrutinizer-ci.com/g/valkyrjaio/phpcsfixer/?branch=master"><img src="https://scrutinizer-ci.com/g/valkyrjaio/phpcsfixer/badges/quality-score.png?b=master" alt="Scrutinizer"></a>
+    <a href="https://coveralls.io/github/valkyrjaio/phpcsfixer?branch=master"><img src="https://coveralls.io/repos/github/valkyrjaio/phpcsfixer/badge.svg?branch=master" alt="Coverage Status" /></a>
+    <a href="https://shepherd.dev/github/valkyrjaio/phpcsfixer"><img src="https://shepherd.dev/github/valkyrjaio/phpcsfixer/coverage.svg" alt="Psalm Shepherd" /></a>
+    <a href="https://sonarcloud.io/summary/new_code?id=valkyrjaio_phpcsfixer"><img src="https://sonarcloud.io/api/project_badges/measure?project=valkyrjaio_phpcsfixer&metric=sqale_rating" alt="Maintainability Rating" /></a>
+</p>
 
-- PHP >= 8.4
-- [`friendsofphp/php-cs-fixer`](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)
-  ^3.95.1
+Build Status
+------------
+
+<table>
+    <tbody>
+        <tr>
+            <td>Linting</td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpcodesniffer.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpcodesniffer.yml/badge.svg?branch=master" alt="PHP Code Sniffer Build Status"></a>
+            </td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpcsfixer.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpcsfixer.yml/badge.svg?branch=master" alt="PHP CS Fixer Build Status"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>Coding Rules</td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phparkitect.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phparkitect.yml/badge.svg?branch=master" alt="PHPArkitect Build Status"></a>
+            </td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/rector.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/rector.yml/badge.svg?branch=master" alt="Rector Build Status"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>Static Analysis</td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpstan.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpstan.yml/badge.svg?branch=master" alt="PHPStan Build Status"></a>
+            </td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/psalm.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/psalm.yml/badge.svg?branch=master" alt="Psalm Build Status"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>Testing</td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpunit.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpunit.yml/badge.svg?branch=master" alt="PHPUnit Build Status"></a>
+            </td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/validate-composer.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/validate-composer.yml/badge.svg?branch=master" alt="Validate Composer Build Status"></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## Installation
 
