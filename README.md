@@ -4,73 +4,35 @@
 
 # Valkyrja PHP CS Fixer
 
-PHP CS Fixer rules for the Valkyrja project.
+Shared PHP CS Fixer configuration for Valkyrja PHP projects — a reusable
+rule set and workflow that enforce consistent code style across consuming
+repositories.
 
 <p>
     <a href="https://packagist.org/packages/valkyrja/phpcsfixer"><img src="https://poser.pugx.org/valkyrja/phpcsfixer/require/php" alt="PHP Version Require"></a>
     <a href="https://packagist.org/packages/valkyrja/phpcsfixer"><img src="https://poser.pugx.org/valkyrja/phpcsfixer/v" alt="Latest Stable Version"></a>
     <a href="https://packagist.org/packages/valkyrja/phpcsfixer"><img src="https://poser.pugx.org/valkyrja/phpcsfixer/license" alt="License"></a>
-    <!-- <a href="https://packagist.org/packages/valkyrja/phpcsfixer"><img src="https://poser.pugx.org/valkyrja/phpcsfixer/downloads" alt="Total Downloads"></a>-->
-    <a href="https://scrutinizer-ci.com/g/valkyrjaio/phpcsfixer/?branch=26.x"><img src="https://scrutinizer-ci.com/g/valkyrjaio/phpcsfixer/badges/quality-score.png?b=26.x" alt="Scrutinizer"></a>
-    <a href="https://coveralls.io/github/valkyrjaio/phpcsfixer?branch=26.x"><img src="https://coveralls.io/repos/github/valkyrjaio/phpcsfixer/badge.svg?branch=26.x" alt="Coverage Status" /></a>
-    <a href="https://shepherd.dev/github/valkyrjaio/phpcsfixer"><img src="https://shepherd.dev/github/valkyrjaio/phpcsfixer/coverage.svg" alt="Psalm Shepherd" /></a>
+    <a href="https://github.com/valkyrjaio/ci-phpcsfixer-php/actions/workflows/ci.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/ci-phpcsfixer-php/actions/workflows/ci.yml/badge.svg?branch=26.x" alt="CI Status"></a>
+    <a href="https://scrutinizer-ci.com/g/valkyrjaio/ci-phpcsfixer-php/?branch=26.x"><img src="https://scrutinizer-ci.com/g/valkyrjaio/ci-phpcsfixer-php/badges/quality-score.png?b=26.x" alt="Scrutinizer"></a>
+    <a href="https://coveralls.io/github/valkyrjaio/ci-phpcsfixer-php?branch=26.x"><img src="https://coveralls.io/repos/github/valkyrjaio/ci-phpcsfixer-php/badge.svg?branch=26.x" alt="Coverage Status" /></a>
+    <a href="https://shepherd.dev/github/valkyrjaio/ci-phpcsfixer-php"><img src="https://shepherd.dev/github/valkyrjaio/ci-phpcsfixer-php/coverage.svg" alt="Psalm Shepherd" /></a>
     <a href="https://sonarcloud.io/summary/new_code?id=valkyrjaio_phpcsfixer"><img src="https://sonarcloud.io/api/project_badges/measure?project=valkyrjaio_phpcsfixer&metric=sqale_rating" alt="Maintainability Rating" /></a>
 </p>
 
-Build Status
+Installation
 ------------
 
-<table>
-    <tbody>
-        <tr>
-            <td>Linting</td>
-            <td>
-                <a href="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpcodesniffer.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpcodesniffer.yml/badge.svg?branch=26.x" alt="PHP Code Sniffer Build Status"></a>
-            </td>
-            <td>
-                <a href="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpcsfixer.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpcsfixer.yml/badge.svg?branch=26.x" alt="PHP CS Fixer Build Status"></a>
-            </td>
-        </tr>
-        <tr>
-            <td>Coding Rules</td>
-            <td>
-                <a href="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phparkitect.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phparkitect.yml/badge.svg?branch=26.x" alt="PHPArkitect Build Status"></a>
-            </td>
-            <td>
-                <a href="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/rector.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/rector.yml/badge.svg?branch=26.x" alt="Rector Build Status"></a>
-            </td>
-        </tr>
-        <tr>
-            <td>Static Analysis</td>
-            <td>
-                <a href="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpstan.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpstan.yml/badge.svg?branch=26.x" alt="PHPStan Build Status"></a>
-            </td>
-            <td>
-                <a href="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/psalm.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/psalm.yml/badge.svg?branch=26.x" alt="Psalm Build Status"></a>
-            </td>
-        </tr>
-        <tr>
-            <td>Testing</td>
-            <td>
-                <a href="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpunit.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/phpcsfixer/actions/workflows/phpunit.yml/badge.svg?branch=26.x" alt="PHPUnit Build Status"></a>
-            </td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
-## Installation
-
-```bash
+```
 composer require valkyrja/phpcsfixer
 ```
 
-## Usage
+Usage
+-----
 
-Call `Rules::getConfig()` from your `.php-cs-fixer.php` configuration file and
-set the finder on the returned config:
+Call `Rules::getConfig()` from your `.php-cs-fixer.php` configuration file
+and set the finder on the returned config:
 
-```php
+```
 // .php-cs-fixer.php
 use Valkyrja\Fixer\Rules;
 use PhpCsFixer\Finder;
@@ -98,7 +60,8 @@ return Rules::getConfig($finder, $header);
 | `$finder` | `Finder` | The PHP CS Fixer `Finder` instance specifying which files to lint                                                    |
 | `$header` | `string` | The license/copyright text injected into every file's `header_comment` block, placed after `declare(strict_types=1)` |
 
-## Configuration Details
+Configuration Details
+---------------------
 
 ### Parallel Execution
 
@@ -170,7 +133,7 @@ These rules are explicitly turned off, overriding preset defaults:
 
 Short array syntax is enforced:
 
-```php
+```
 // bad
 $a = array(1, 2, 3);
 // good
@@ -195,19 +158,19 @@ A blank line is required before the following statements:
 
 One space around the concatenation operator:
 
-```php
+```
 $s = 'Hello' . ' ' . 'World';
 ```
 
 **`global_namespace_import`**
 
-Classes, constants, and functions from the global namespace are imported with
-`use` statements rather than referenced with a leading backslash.
+Classes, constants, and functions from the global namespace are imported
+with `use` statements rather than referenced with a leading backslash.
 
 **`header_comment`**
 
-The string passed to `getConfig($header)` is injected as a `/* */` block comment
-immediately after `declare(strict_types=1);` in every file.
+The string passed to `getConfig($header)` is injected as a `/* */` block
+comment immediately after `declare(strict_types=1);` in every file.
 
 **`increment_style`**
 
@@ -216,7 +179,8 @@ Post-increment/decrement (`$i++`, `$i--`) is enforced over pre-increment.
 **`method_argument_space`**
 
 - No multiple spaces after a comma
-- Multiline argument lists are fully multiline (each argument on its own line)
+- Multiline argument lists are fully multiline (each argument on its own
+  line)
 - Arguments after heredocs are formatted correctly
 
 **`multiline_whitespace_before_semicolons`**
@@ -232,7 +196,7 @@ All aliased functions are replaced with their canonical names (`@all` set).
 
 Nullable types use union syntax:
 
-```php
+```
 // bad
 ?string $value
 // good
@@ -241,10 +205,10 @@ string|null $value
 
 **`operator_linebreak`**
 
-Binary operators (including non-boolean) are placed at the **beginning** of the
-continued line:
+Binary operators (including non-boolean) are placed at the **beginning** of
+the continued line:
 
-```php
+```
 $result = $a
     && $b
     && $c;
@@ -261,7 +225,8 @@ Class members must appear in this order (sort algorithm: none):
 5. Readonly properties: `public` → `protected` → `private`
 6. Instance properties: `public` → `protected` → `private`
 7. `construct`, `destruct`
-8. Static methods: `public` → `protected` → `private` (with abstract variants)
+8. Static methods: `public` → `protected` → `private` (with abstract
+   variants)
 9. PHPUnit methods
 10. Instance methods: `public` → `protected` → `private` (with abstract
     variants)
@@ -285,24 +250,24 @@ PHPDoc tags must appear in the order: `@param`, `@throws`, `@return`.
 
 **`phpdoc_to_comment`**
 
-Inline `/* */` comments are converted to `//` except for `@todo`, `@var`, and
-`@psalm-suppress` tags.
+Inline `/* */` comments are converted to `//` except for `@todo`, `@var`,
+and `@psalm-suppress` tags.
 
 **`phpdoc_types_order`**
 
 PHPDoc union types are not sorted, but `null` is always placed last:
 
-```php
+```
 /** @param string|int|null $value */
 ```
 
 **`php_unit_test_case_static_method_calls`**
 
-PHPUnit assertion methods are called on `self::` by default. The expectation
-methods (`any`, `atLeastOnce`, `exactly`, `once`, `never`) use `$this->` since
-they return mock builder objects:
+PHPUnit assertion methods are called on `self::` by default. The
+expectation methods (`any`, `atLeastOnce`, `exactly`, `once`, `never`) use
+`$this->` since they return mock builder objects:
 
-```php
+```
 // assertions
 self::assertSame($expected, $actual);
 
@@ -314,14 +279,15 @@ $mock->expects($this->once())->method('run');
 
 Yoda conditions are disabled — the variable goes on the left:
 
-```php
+```
 // bad (yoda)
 if (null === $value) { ... }
 // good
 if ($value === null) { ... }
 ```
 
-## Workflows
+Workflows
+---------
 
 The [`_workflow-call.yml`](.github/workflows/_workflow-call.yml) reusable
 workflow runs PHP CS Fixer against the calling repository's source. It is
@@ -343,7 +309,7 @@ designed to be called from other repositories via `workflow_call`.
 ```yaml
 jobs:
   phpcsfixer:
-    uses: valkyrjaio/phpcsfixer/.github/workflows/_workflow-call.yml@26.x
+    uses: valkyrjaio/ci-phpcsfixer-php/.github/workflows/_workflow-call.yml@26.x
     permissions:
       pull-requests: write
       contents: read
@@ -363,3 +329,29 @@ jobs:
 
 `secrets: inherit` is required to pass the `VALKYRJA_GHA_APP_ID` and
 `VALKYRJA_GHA_PRIVATE_KEY` org secrets used for PR comments.
+
+Contributing
+------------
+
+See [`CONTRIBUTING.md`][contributing url] for the submission process and
+[`VOCABULARY.md`][vocabulary url] for the terminology used across Valkyrja.
+
+Security Issues
+---------------
+
+If you discover a security vulnerability, please follow our
+[disclosure procedure][security vulnerabilities url].
+
+License
+-------
+
+Licensed under the [MIT license][MIT license url]. See
+[`LICENSE.md`](./LICENSE.md).
+
+[contributing url]: https://github.com/valkyrjaio/.github/blob/master/CONTRIBUTING.md
+
+[vocabulary url]: https://github.com/valkyrjaio/.github/blob/master/VOCABULARY.md
+
+[security vulnerabilities url]: https://github.com/valkyrjaio/.github/blob/master/SECURITY.md
+
+[MIT license url]: https://opensource.org/licenses/MIT
